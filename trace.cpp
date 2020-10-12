@@ -535,13 +535,8 @@ int trace_init(char *tracefile, char *ktfile)
             tagp += 16;
 	    fread(kt_ch, 1, 3, ktfp);
 	    has_read += 3;
-	    printf("tagp =%llu, has_read = %llu \n", tagp,has_read);
 	    ret_len = read_kt();
-	    printf("ret_len = %d\n",ret_len);
 	    char ttt_ch = (*(char*)(kt_ch));
-	    printf("magic in KT, %x in KT\n", ttt_ch);
-	    printf("end dump page talbe flag, ,dump_pte_trace = %llu, tagp = %lu\n",dump_pte_trace,tagp);
-	    printf("h_set = %llu , h_free = %llu\n",h_set,h_free);
 	    printf("set_pt_num = %llu,free_pt_num = %llu, set_page_table_num = %llu, free_page_table_num = %llu\n",set_pt_num,free_pt_num, set_page_table_num, free_page_table_num);
             break;
         }
@@ -654,8 +649,6 @@ int trace_init(char *tracefile, char *ktfile)
 
             if (kernel_trace_tag == DUMP_PAGE_TABLE_TAG) {
 		printf("find DUMP_PAGE_TABLE_TAG in hmtt trace, trace_idd = %llu\n",trace_id);
-		
-	        printf("h_set = %llu , h_free = %llu , temp_sync = %llu\n",h_set,h_free, tmp_sync);
                 break;
             }
         }
