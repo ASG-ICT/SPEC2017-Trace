@@ -49,5 +49,5 @@ The size of each kernel trace is 13 bytes.
 magic represents the type of trace. When magic equals 0xec, it represents set PTE kernel trace. When magic equals 0xfc、0X22 or 0X33, it represents free PTE kernel trace.
 
 # Contact us
-If you need more details about spec2017 trace, please contact this email:lihaifeng@ict.ac.cn
+If you need more details about spec2017 trace, please contact this email:lutianyue@ict.ac.cn
 
